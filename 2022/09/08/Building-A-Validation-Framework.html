@@ -4,22 +4,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Anything AI,ML,DS,NLP, &amp; Python. | An easy to use blogging platform with support for Jupyter Notebooks.</title>
+<title>Building A Validation Framework | Anything AI,ML,DS,NLP, &amp; Python.</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Anything AI,ML,DS,NLP, &amp; Python." />
+<meta property="og:title" content="Building A Validation Framework" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://moro23.github.io/ml_ds_blogz/" />
-<meta property="og:url" content="https://moro23.github.io/ml_ds_blogz/" />
+<meta name="description" content="Before training a machine learning (ML) model, the dataset is divided into training, validation, and testing sets. This process of dividing the dataset is also known as building a validation framework." />
+<meta property="og:description" content="Before training a machine learning (ML) model, the dataset is divided into training, validation, and testing sets. This process of dividing the dataset is also known as building a validation framework." />
+<link rel="canonical" href="https://moro23.github.io/ml_ds_blogz/2022/09/08/Building-A-Validation-Framework.html" />
+<meta property="og:url" content="https://moro23.github.io/ml_ds_blogz/2022/09/08/Building-A-Validation-Framework.html" />
 <meta property="og:site_name" content="Anything AI,ML,DS,NLP, &amp; Python." />
-<meta property="og:image" content="https://moro23.github.io/ml_ds_blogz/images/logo.png" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://moro23.github.io/ml_ds_blogz/images/logo.png" />
-<meta property="twitter:title" content="Anything AI,ML,DS,NLP, &amp; Python." />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-08T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Building A Validation Framework" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Anything AI,ML,DS,NLP, &amp; Python.","image":"https://moro23.github.io/ml_ds_blogz/images/logo.png","name":"Anything AI,ML,DS,NLP, &amp; Python.","url":"https://moro23.github.io/ml_ds_blogz/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-08T00:00:00-05:00","datePublished":"2022-09-08T00:00:00-05:00","description":"Before training a machine learning (ML) model, the dataset is divided into training, validation, and testing sets. This process of dividing the dataset is also known as building a validation framework.","headline":"Building A Validation Framework","mainEntityOfPage":{"@type":"WebPage","@id":"https://moro23.github.io/ml_ds_blogz/2022/09/08/Building-A-Validation-Framework.html"},"url":"https://moro23.github.io/ml_ds_blogz/2022/09/08/Building-A-Validation-Framework.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/ml_ds_blogz/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://moro23.github.io/ml_ds_blogz/feed.xml" title="Anything AI,ML,DS,NLP, &amp; Python." /><link rel="shortcut icon" type="image/x-icon" href="/ml_ds_blogz/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,52 +70,53 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><p>This site is built with <a href="https://github.com/fastai/fastpages">fastpages</a>, An easy to use blogging platform with extra features for Jupyter Notebooks.</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-<p><img src="/ml_ds_blogz/images/diagram.png" alt="" title="https://github.com/fastai/fastpages" /></p>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Building A Validation Framework</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-08T00:00:00-05:00" itemprop="datePublished">
+        Sep 8, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
 
-<p><a href="https://github.com/fastai/fastpages">fastpages</a> automates the process of creating blog posts via GitHub Actions, so you don’t have to fuss with conversion scripts.  A full list of features can be found on <a href="https://github.com/fastai/fastpages">GitHub</a>.</p>
+    
 
-<p>You can edit the <code class="language-plaintext highlighter-rouge">index.html</code> file to change this content.</p>
+    </header>
 
-<h1 id="posts">Posts</h1>
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Before training a machine learning (ML) model, the dataset is divided into <strong>training, validation, and testing sets</strong>. This process of dividing the dataset is also known as <strong><em>building a validation framework</em></strong>.</p>
 
+<p>In an ideal situation, the dataset is normally divided into these sets and hence one can continue with the other data preprocessing steps and then proceed to training the mode.</p>
 
+<p>In a situation where the dataset has not been divided into these sets, the best method to use a means of building a validation framework is <strong>Cross Validation</strong>. Cross Validation is the process of splitting the dataset into <strong>Training and Testing</strong> set in an unbiased format.</p>
 
-  
+<h3 id="the-steps-for-using-cross-validation-in-building-a-validation-framework-is-as-follows"><strong>The Steps For Using Cross Validation In Building A Validation Framework is as follows:</strong></h3>
 
-  <!-- Hide posts if front matter flag hide:true -->
-  
-  
+<p>Step 1: Randomly divide the data into different groups <strong>(n)</strong>.</p>
 
-  <!-- Sort posts by rank, then date -->
-  
-  
-  
+<p>Step 2: Use <strong>(n-1</strong>) group for training the model and the last group for testing.</p>
 
- 
-  
+<p>Step 3: The process is repeated for <strong>n</strong> number of iterations which is called <strong>n-Fold Cross validation.</strong></p>
 
-   <!-- Assemble final sorted posts array -->
-  
-  <ul class="post-list"><li><h3>
-    <a class="post-link" href="/ml_ds_blogz/2022/09/08/Building-A-Validation-Framework.html">
-    Building A Validation Framework
-    </a>
-</h3><p class="post-meta">Sep 8, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/ml_ds_blogz/jupyter/2020/02/20/test.html">
-    Fastpages Notebook Blog Post
-    </a>
-</h3><p class="post-meta-description">A tutorial of fastpages for Jupyter notebooks.</p><p class="post-meta">Feb 20, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ml_ds_blogz/markdown/2020/01/14/test-markdown-post.html">
-    An Example Markdown Post
-    </a>
-</h3><p class="post-meta-description">A minimal example of using markdown with fastpages.</p><p class="post-meta">Jan 14, 2020</p>
-</li></ul>
+<h4 id="notes">Notes</h4>
 
-    </div>
+<p><em>The number of iterations are called Folds.</em></p>
+
+<p><em>The method of Cross Validation that is used in a situation where we have lots of data is the <strong>10-Fold cross validation</strong> which is the preferred algorithm method.</em></p>
+
+<p><em>Another method for Cross Validation is the <strong>Leave-One-Out Cross Validation</strong>. Which is used in a situation where we are dealing with less amount of data.</em></p>
+
+<p><em>Lastly, one of the important reasons for building a validation framework is to avoid <strong>Data Leakage</strong>. Which occurs when the same data used for training a model is also used for testing the model.</em></p>
+
+<p><strong>Moro A. Wahab</strong></p>
+
+  </div><a class="u-url" href="/ml_ds_blogz/2022/09/08/Building-A-Validation-Framework.html" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/ml_ds_blogz/"></data>
